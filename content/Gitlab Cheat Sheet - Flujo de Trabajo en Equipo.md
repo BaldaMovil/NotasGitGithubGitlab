@@ -7,14 +7,14 @@
 ``` bash
 	git clone <url-del-repositorio>
 	cd <nombre-del-repositorio>
-	```
+```
 
 - Configurar tu identidad
 
 ``` bash
 	git config user.name "Tu Nombre"
 	git config user.email "tu@email.com"
-	```
+```
 
 # 📋 [[Git/Flujo Diario de Trabajo]]
 
@@ -25,13 +25,13 @@
 ``` bash
 	git checkout main  # o master
 	git pull origin main
-	```
-	
+```
+
 - Crear una nueva rama para tu tarea
 
 ``` bash
 	git checkout -b qa/nombre-descriptivo
-	```
+```
 
 ## 2. Mientras Trabajas
 
@@ -39,26 +39,26 @@
 
 ``` bash
 	git status
-	```
-	
+```
+
 - Añadir cambios al staging
 
 ``` bash
 	git add .                    # Todos los archivos
 	git add archivo.txt          # Archivo específico
-	```
-	
+```
+
 - Hacer commit
 
 ``` bash
 	git commit -m "Descripción clara del cambio"
-	```
-	
+```
+
 - Ver historial
 
 ``` bash
 	git log --oneline
-	```
+```
 
 ## 3. Sincronizar con la Nube
 
@@ -67,12 +67,12 @@
 ``` bash
 	git push -u origin feature/nombre-descriptivo
 ```
-	
+
 - Subir cambios adicionales
 
 ``` bash
 	git push
-	```
+```
 
 ## 4. Actualizar tu Rama con Cambios del Equipo
 
@@ -106,7 +106,7 @@
 
 ``` bash
 	git branch -d feature/nombre-descriptivo
-	```
+```
 
 # 🛡️ Prevenir Conflictos
 
@@ -114,20 +114,20 @@
 
 ``` bash
 	git pull origin main --rebase
-	```
-	
+```
+
 -  Antes de hacer push
 
 ``` bash
 	git pull --rebase
-	```
-	
+```
+
 - Commits pequeños y frecuentes
-	
+
 ``` bash
 	git commit -m "Mensaje específico"
-	```
-	
+```
+
 - Comunicación con el equipo sobre archivos compartidos
 
 # ⚠️ [[Git/Resolver Conflictos]]
@@ -135,11 +135,11 @@
 ## Cuando aparece un conflicto:
 
  1. Ver archivos en conflicto
-	
+
 ``` bash
 	git status
-	```
-	
+```
+
 1. Abrir archivos marcados y buscar:
 
 ``` bash
@@ -153,23 +153,23 @@
  2. Editar manualmente, eliminar marcadores y decidir qué mantener
 
  3. Marcar como resuelto
-	
+
 ``` bash
 	git add archivo-resuelto.txt
-	```
+```
 
 4. Continuar el merge/rebase
-	
+
 ``` bash
 	git rebase --continue  # Si estabas en rebase
 	git commit             # Si estabas en merge
-	```
+```
 
  5. Subir cambios
-	
+
 ``` bash
 	git push
-	```
+```
 
 ## Si te equivocas:
 
@@ -177,67 +177,68 @@
 
 ``` bash
 	git merge --abort
-	```
-	
+```
+
 -  Abortar rebase
-	
+
 ``` bash
 	git rebase --abort
-	```
-	
+```
+
 - Deshacer último commit (mantiene cambios)
 
 ``` bash
 	git reset --soft HEAD~1
-	```
-	
+```
+
 - Descartar cambios locales
 
 ``` bash
 	git checkout -- archivo.txt
 	git restore archivo.txt
-	```
+```
 
 # 🔧 Comandos Útiles
 
 - Ver ramas
-	
+
 ``` bash
 	git branch -a
-	```
-	
+```
+
 -  Cambiar de rama
-	
+
 ``` bash
 	git checkout nombre-rama
 	git switch nombre-rama
-	```
+```
+
 - Ver diferencias
-	
+
 ``` bash
 	git diff
 	git diff main..feature/mi-rama
-	```
-	
+```
+
 - Guardar cambios temporalmente
-	
+
 ``` bash
 	git stash
 	git stash pop
-	```
-	
+```
+
 - Ver quién modificó cada línea
 	
 ``` bash
 	git blame archivo.txt
-	```
-	
+```
+
 - Traer rama remota
 	
 ``` bash
 	git fetch origin
 	git checkout -b nueva-rama origin/nueva-rama
-	```
+```
 
 # 📌 Mejores Prácticas
 

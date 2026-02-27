@@ -16,7 +16,7 @@
 	git config user.email "tu@email.com"
 ```
 
-# 📋 [[Git/Flujo Diario de Trabajo]]
+# 📋 [[Git-Flujo Diario de Trabajo]]
 
 ## 1. Antes de Empezar a Trabajar
 
@@ -35,7 +35,7 @@
 
 ## 2. Mientras Trabajas
 
-- Ver estado de archivos modificados.[[Git/Estados de Git]]
+- Ver estado de archivos modificados.[[Git-Estados de Git]]
 
 ``` bash
 	git status
@@ -130,7 +130,7 @@
 
 - Comunicación con el equipo sobre archivos compartidos
 
-# ⚠️ [[Git/Resolver Conflictos]]
+# ⚠️ [[Git-Resolver Conflictos]]
 
 ## Cuando aparece un conflicto:
 

@@ -3,16 +3,18 @@
 # 🚀 Configuración Inicial (Una sola vez)
 
 - Clonar el repositorio
-- 
-	`git clone <url-del-repositorio>`
-	
-	`cd <nombre-del-repositorio>`
+
+``` bash
+	git clone <url-del-repositorio>
+	cd <nombre-del-repositorio>
+	```
 
 - Configurar tu identidad
-- 
-	`git config user.name "Tu Nombre"`
-	
-	`git config user.email "tu@email.com"`
+
+``` bash
+	git config user.name "Tu Nombre"
+	git config user.email "tu@email.com"
+	```
 
 # 📋 [[Git/Flujo Diario de Trabajo]]
 
@@ -20,43 +22,57 @@
 
 - Actualizar tu rama principal
 
-	`git checkout main  # o master`
-	
-	`git pull origin main`
+``` bash
+	git checkout main  # o master
+	git pull origin main
+	```
 	
 - Crear una nueva rama para tu tarea
 
-	`git checkout -b qa/nombre-descriptivo`
+``` bash
+	git checkout -b qa/nombre-descriptivo
+	```
 
 ## 2. Mientras Trabajas
 
 - Ver estado de archivos modificados.[[Git/Estados de Git]]
 
-	`git status`
+``` bash
+	git status
+	```
 	
 - Añadir cambios al staging
 
-	`git add .                    # Todos los archivos`
-	
-	`git add archivo.txt          # Archivo específico`
+``` bash
+	git add .                    # Todos los archivos
+	git add archivo.txt          # Archivo específico
+	```
 	
 - Hacer commit
 
-	`git commit -m "Descripción clara del cambio"`
+``` bash
+	git commit -m "Descripción clara del cambio"
+	```
 	
 - Ver historial
 
-	`git log --oneline`
+``` bash
+	git log --oneline
+	```
 
 ## 3. Sincronizar con la Nube
 
 - Subir tu rama por primera vez
 
-	`git push -u origin feature/nombre-descriptivo`
+``` bash
+	git push -u origin feature/nombre-descriptivo
+```
 	
 - Subir cambios adicionales
 
-	`git push`
+``` bash
+	git push
+	```
 
 ## 4. Actualizar tu Rama con Cambios del Equipo
 
@@ -81,7 +97,6 @@
 ### O merge local:
 
 ``` bash
-
 	git checkout main
 	git pull origin main
 	git merge feature/nombre-descriptivo
@@ -89,21 +104,29 @@
 ```
 ### Eliminar rama local
 
-	`git branch -d feature/nombre-descriptivo`
+``` bash
+	git branch -d feature/nombre-descriptivo
+	```
 
 # 🛡️ Prevenir Conflictos
 
 - Actualizar frecuentemente (varias veces al día)
 
-	`git pull origin main --rebase`
+``` bash
+	git pull origin main --rebase
+	```
 	
 -  Antes de hacer push
 
-	`git pull --rebase`
+``` bash
+	git pull --rebase
+	```
 	
 - Commits pequeños y frecuentes
 	
-	`git commit -m "Mensaje específico"`
+``` bash
+	git commit -m "Mensaje específico"
+	```
 	
 - Comunicación con el equipo sobre archivos compartidos
 
@@ -113,7 +136,9 @@
 
  1. Ver archivos en conflicto
 	
-	`git status`
+``` bash
+	git status
+	```
 	
 1. Abrir archivos marcados y buscar:
 
@@ -124,70 +149,95 @@
 	Código del otro desarrollador
 	>>>>>>> rama-origen
 ```
+
  2. Editar manualmente, eliminar marcadores y decidir qué mantener
 
  3. Marcar como resuelto
 	
-	`git add archivo-resuelto.txt`
+``` bash
+	git add archivo-resuelto.txt
+	```
 
 4. Continuar el merge/rebase
 	
-	`git rebase --continue  # Si estabas en rebase`
-	`git commit             # Si estabas en merge`
+``` bash
+	git rebase --continue  # Si estabas en rebase
+	git commit             # Si estabas en merge
+	```
 
  5. Subir cambios
 	
-	`git push`
-	`Insert at cursor`
+``` bash
+	git push
+	```
 
 ## Si te equivocas:
 
 - Abortar merge
 
-	`git merge --abort`
+``` bash
+	git merge --abort
+	```
 	
 -  Abortar rebase
 	
-	`git rebase --abort`
+``` bash
+	git rebase --abort
+	```
 	
 - Deshacer último commit (mantiene cambios)
 
-	`git reset --soft HEAD~1`
+``` bash
+	git reset --soft HEAD~1
+	```
 	
 - Descartar cambios locales
-	
-	`git checkout -- archivo.txt`
-	`git restore archivo.txt`
+
+``` bash
+	git checkout -- archivo.txt
+	git restore archivo.txt
+	```
 
 # 🔧 Comandos Útiles
 
 - Ver ramas
 	
-	`git branch -a`
+``` bash
+	git branch -a
+	```
 	
 -  Cambiar de rama
 	
-	`git checkout nombre-rama`
-	`git switch nombre-rama`
-	
+``` bash
+	git checkout nombre-rama
+	git switch nombre-rama
+	```
 - Ver diferencias
 	
-	`git diff`
-	`git diff main..feature/mi-rama`
+``` bash
+	git diff
+	git diff main..feature/mi-rama
+	```
 	
 - Guardar cambios temporalmente
 	
-	`git stash`
-	`git stash pop`
+``` bash
+	git stash
+	git stash pop
+	```
 	
 - Ver quién modificó cada línea
 	
-	`git blame archivo.txt`
+``` bash
+	git blame archivo.txt
+	```
 	
 - Traer rama remota
 	
-	`git fetch origin`
-	`git checkout -b nueva-rama origin/nueva-rama`
+``` bash
+	git fetch origin
+	git checkout -b nueva-rama origin/nueva-rama
+	```
 
 # 📌 Mejores Prácticas
 
